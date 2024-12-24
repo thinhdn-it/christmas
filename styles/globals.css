@@ -1,0 +1,46 @@
+/* Hiệu ứng ông già Noel bay */
+@keyframes santaAnimation {
+  0% {
+    transform: translateX(-100vw) translateY(0); /* Bắt đầu từ ngoài màn hình bên trái */
+  }
+  100% {
+    transform: translateX(100vw) translateY(-50vh); /* Kết thúc ngoài màn hình bên phải và lên trên */
+  }
+}
+
+.animate-santa {
+  animation: santaAnimation 20s linear infinite; /* Hoạt động liên tục */
+}
+
+
+  /* Hiệu ứng tuyết */
+  @keyframes snow {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(1080px);
+      opacity: 0;
+    }
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snow 10s linear infinite;
+  }
+  
+  .snowflake:nth-child(odd) {
+    animation-duration: 12s;
+  }
+  
+  .snowflake:nth-child(even) {
+    animation-duration: 8s;
+  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
